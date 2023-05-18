@@ -23,7 +23,7 @@ function pctCalculation(population, populationTotal) {
 }
 
 //check China
-//pctCalculation(countriesPopulation[0].population, populationTotal);
+pctCalculation(countriesPopulation[0].population, populationTotal);
 
 //task2
 // copy field
@@ -31,29 +31,26 @@ function pctCalculation(population, populationTotal) {
 const copyCountries = countriesPopulation.slice();
 
 //check copy
-//console.table(copyCountries);
+console.table(copyCountries);
 
 //rank
-copyCountries.sort(function (a, b) {
-  return a - b;
-});
-
-copyCountries.reverse();
+copyCountries.sort((a, b) => a.population - b.population);
 
 // check rank
-//console.table(copyCountries);
+console.table(copyCountries);
 
-copyCountries.forEach((item, index) => {
-  item.id = item.country.slice(0, 3) + index;
-});
-//console.table(copyCountries);
+//copyCountries = countriesPopulation.map((item, index) => ({
+//id = item.country.slice(0, 3) + index
+//item.percentage = ((item.population / populationTotal) * 100).toFixed(2),
+//}));
 
-copyCountries.forEach((item) => {
-  item.percentage = ((item.population / populationTotal) * 100).toFixed(2);
-});
+console.table(copyCountries);
+
+//copyCountries.forEach((item) => {
+//item.percentage = ((item.population / populationTotal) * 100).toFixed(2);
+//});
 //check assign
 //console.table(copyCountries);
-
 const filteredCountries = copyCountries.filter(
   (c) =>
     c.country.length > 4 &&
@@ -62,4 +59,4 @@ const filteredCountries = copyCountries.filter(
     c.percentage < 10
 );
 
-//console.table(filteredCountries);
+console.table(filteredCountries);
