@@ -45,9 +45,9 @@ function checkCountry(country, countries) {
 }
 
 // check
-// checkCountry("Germany", countries);
-// checkCountry("Japan", countries);
-// checkCountry(1000, countries);
+checkCountry("Germany", countries);
+checkCountry("Japan", countries);
+checkCountry(1000, countries);
 
 // Druha cast
 
@@ -74,10 +74,10 @@ function addCountry(country, countries) {
 }
 
 //check
-// addCountry("Vietnam", countries);
-// addCountry("Mexico", countries);
-// addCountry("Poland", countries);
-// addCountry("", countries);
+addCountry("Vietnam", countries);
+addCountry("Mexico", countries);
+addCountry("Poland", countries);
+addCountry("", countries);
 
 // Treti cast
 
@@ -90,7 +90,7 @@ function removeCountry(country, countries) {
     countries.splice(remove_Country_index, 1);
     console.log(
       `Zadaná krajina ${country} byla odstraněná ze seznamu krajin na indexu 
-      ${question_Country_index}.
+      ${remove_Country_index}.
        Aktuální počet krajin v seznamu je: ${countries.length}.`
     );
     return;
@@ -101,7 +101,7 @@ function removeCountry(country, countries) {
 }
 
 // check
-// removeCountry("", countries);
-// removeCountry("Vietnam", countries);
-// removeCountry("Laos", countries);
-// removeCountry("Thailand", countries);
+removeCountry("", countries);
+removeCountry("Vietnam", countries);
+removeCountry("Laos", countries);
+removeCountry("Thailand", countries);
